@@ -12,7 +12,7 @@ $BOOTSTRAP_SCRIPT = <<EOF
 	echo VAGRANT SETUP: DOING APT-GET STUFF...
 	# Install prereqs
 	sudo apt-get update
-	sudo apt-get install -y python-software-properties make git-core curl
+	sudo apt-get install -y python-software-properties make git-core curl g++ htop redis-server mongodb
 
 	echo VAGRANT SETUP: DOING NODE STUFF...
 	export NODE_VERSION=0.10
