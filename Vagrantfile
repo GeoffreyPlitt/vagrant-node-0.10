@@ -25,6 +25,12 @@ $BOOTSTRAP_SCRIPT = <<EOF
 	nvm install v$NODE_VERSION
 	nvm use $NODE_VERSION
 
+  # Chef/Knife
+  echo '----> Upgrading Chef/Knife to latest version...'
+  curl -L https://www.opscode.com/chef/install.sh | sudo bash
+  echo '----> Chef/Knife upgrade complete:'
+  knife --version
+
 	# Make vagrant automatically go to /vagrant when we ssh in.
 	echo "cd /vagrant" | sudo tee -a ~vagrant/.profile
 
