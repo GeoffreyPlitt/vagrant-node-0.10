@@ -31,6 +31,9 @@ $BOOTSTRAP_SCRIPT = <<EOF
   echo '----> Chef/Knife upgrade complete:'
   knife --version
 
+  # Heroku toolbelt
+  wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
 	# Make vagrant automatically go to /vagrant when we ssh in.
 	echo "cd /vagrant" | sudo tee -a ~vagrant/.profile
 
